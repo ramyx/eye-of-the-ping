@@ -1,20 +1,34 @@
 # Eye of the Ping
 
-**Eye of the Ping** is an application built with [Electron](https://www.electronjs.org/) that monitors devices connected to your local network. When a device joins or leaves the network, the app sends a notification and plays a custom audio file assigned to the device.
+**Eye of the Ping** is a Python application with a Tkinter-based interface that monitors devices on your local network. The app detects when devices connect or disconnect, notifies the user, and provides options to manage monitored devices.
+
+---
 
 ## **Features**
-- Monitor devices in your local network using their MAC or IP address.
-- Receive notifications when a device connects or disconnects.
-- Assign and play custom audio files for each device.
-- Modern and simple interface with a device status table.
+- Monitor devices using their IP address and dynamically resolve their MAC addresses.
+- Notify the user when a device connects or disconnects.
+- Update a device's IP address automatically if it changes.
+- Simple interface for adding, removing, and viewing monitored devices.
+
+---
 
 ## **Requirements**
-- Node.js (version 16 or higher recommended)
-- npm or yarn
-- A compatible operating system (Windows, macOS, or Linux)
+- **Python 3.10 or higher**
+- Required Python libraries:
+  - `tkinter`
+  - `plyer`
+
+Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+---
 
 ## **Installation**
-1. Clone this repository:
+
+### **From source**
+1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/eye-of-the-ping.git
    ```
@@ -22,49 +36,57 @@
    ```bash
    cd eye-of-the-ping
    ```
-3. Install dependencies:
+3. Install the dependencies:
    ```bash
-   npm install
+   pip install -r requirements.txt
    ```
+
+---
 
 ## **Usage**
-1. Start the application:
+1. Run the application:
    ```bash
-   npm start
+   python3 main.py
    ```
-2. Configure the devices you want to monitor:
-   - Enter the owner's name, phone number, MAC address, IP address, and upload a custom audio file for each device.
-3. The app will automatically start monitoring the network.
+2. Add devices by entering their **name** and **IP address** in the interface.
+3. The app will monitor these devices, detect their MAC addresses, and notify you of their status.
 
-## **Project Structure**
-- **`/src`**: Application source code.
-  - **`main.js`**: Main Electron process.
-  - **`preload.js`**: Secure bridge configuration for exposing features to the renderer process.
-  - **`renderer.js`**: Renderer logic.
-- **`/assets`**: Static assets such as icons and audio files.
-- **`/dist`**: Compiled files (ignored in `.gitignore`).
+---
 
-## **Additional Features**
-- Custom audio files are stored locally in the project root folder.
-- Notifications are triggered automatically when devices connect or disconnect.
+## **File Structure**
+- **`main.py`**: Main application script.
+- **`utils/network.py`**: Functions for monitoring devices and resolving IP/MAC.
+- **`utils/storage.py`**: Functions for loading and saving device data.
+- **`requirements.txt`**: List of required Python libraries.
+- **`README.md`**: Documentation.
+- **`.gitignore`**: Files and directories to ignore in Git.
+
+---
+
+## **Known Issues**
+- For accurate monitoring of devices and network operations, ensure the application has appropriate network permissions.
+
+---
 
 ## **Contributing**
-We welcome contributions! To contribute:
-1. Fork the project.
-2. Create a new branch for your feature:
+We welcome contributions! Please:
+1. Fork the repository.
+2. Create a new branch:
    ```bash
-   git checkout -b feature/new-feature
+   git checkout -b feature/your-feature
    ```
-3. Make your changes and commit them:
+3. Commit your changes:
    ```bash
-   git commit -m "Add new feature"
+   git commit -m "Add your feature description"
    ```
-4. Submit a pull request.
+4. Push to the branch and create a pull request.
+
+---
 
 ## **License**
-This project is licensed under the GNU General Public License v3.0.
-See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the [MIT License](LICENSE).
+
+---
 
 ## **Author**
 Developed by **Ramiro Daniel Martinez**.
-

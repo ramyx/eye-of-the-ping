@@ -1,0 +1,31 @@
+name: eye-of-the-ping
+version: "1.0.0"
+summary: A network monitoring application
+description: |
+  Eye of the Ping monitors devices on your local network and notifies about connections or disconnections.
+
+base: core22
+confinement: strict
+
+apps:
+  eye-of-the-ping:
+    command: bin/main.py
+    plugs: [network, home, desktop, desktop-legacy]
+
+parts:
+  eye-of-the-ping:
+    plugin: python
+    source: .
+    stage-packages:
+      - python3
+      - python3-tk
+      - python3-plyer
+      - tk-dev
+      - libx11-6
+      - libxft2
+      - libxext6
+    override-build: |
+      snapcraftctl build
+      mkdir -p $SNAPCRAFT_PART_INSTALL/bin
+      cp main.py $SNAPCRAFT_PART_INSTALL/bin/main.py
+      chmod +x $SNAPCRAFT_PART_INSTALL/bin/main.py
