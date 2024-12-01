@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Eye of the Ping</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .connected {
+            color: green;
+            font-weight: bold;
+        }
+
+        .disconnected {
+            color: red;
+            font-weight: bold;
+        }
+
+        .delete-btn {
+            padding: 5px 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Eye of the Ping</h1>
+    <p>This app will greet people when they join your network with personalized audio.</p>
+    <form id="device-form">
+        <input type="text" id="name-input" placeholder="Owner's Name" required />
+        <input type="text" id="phone-input" placeholder="Phone Number" required />
+        <input type="text" id="mac-input" placeholder="Device MAC Address" required />
+        <input type="text" id="ip-input" placeholder="Device IP Address" required />
+        <input type="file" id="sound-input" accept="audio/*" required />
+        <button type="submit">Add Device</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Owner</th>
+                <th>Phone</th>
+                <th>MAC Address</th>
+                <th>IP Address</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="device-list"></tbody>
+    </table>
+    <div id="status">Waiting for a connection...</div>
+    <script src="renderer.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "eye-of-the-ping",
+  "version": "1.0.0",
+  "description": "**Eye of the Ping** is a desktop application built with Electron that monitors your local network, detects specific devices using their MAC addresses, and notifies you when they connect with personalized messages. Perfect for network monitoring or home automation with a tech-savvy and geeky touch.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ramiro Martinez",
+  "license": "GPL-3.0-only",
+  "devDependencies": {
+    "electron": "^33.2.1"
+  },
+  "dependencies": {
+    "google-tts-api": "^2.0.2"
+  }
+}

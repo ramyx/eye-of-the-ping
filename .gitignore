@@ -1,0 +1,54 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+.pnpm-debug.log*
+
+# Logs
+logs/
+*.log
+*.tgz
+*.pid
+*.seed
+*.pid.lock
+*.tsbuildinfo
+
+# Electron
+dist/
+out/
+build/
+*.asar
+*.node
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+*.swp
+*.swpx
+*.lock
+*.bak
+*.backup
+
+# Miscellaneous
+!.gitattributes
+!.gitignore
