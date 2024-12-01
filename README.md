@@ -63,7 +63,7 @@ We welcome contributions! To contribute:
 
 ## **License**
 This project is licensed under the GNU General Public License v3.0.
-See the [LICENSE](LICENCE) file for more details.
+See the [LICENSE](LICENSE) file for more details.
 
 ## **Author**
 Developed by **Ramiro Daniel Martinez**.
