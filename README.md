@@ -18,28 +18,28 @@
   - `tkinter`
   - `plyer`
 
-Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
 ---
 
 ## **Installation**
 
-### **From source**
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/eye-of-the-ping.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd eye-of-the-ping
-   ```
-3. Install the dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+### **1. Install system dependencies (Ubuntu)**
+On Ubuntu, make sure to install the required system packages using `apt`:
+```bash
+sudo apt update
+sudo apt install python3 python3-tk python3-pip
+```
+
+### **2. Clone this repository**
+```bash
+git clone https://github.com/yourusername/eye-of-the-ping.git
+cd eye-of-the-ping
+```
+
+### **3. Install Python dependencies(Other than Ubuntu)**
+Use `pip` to install the required Python libraries:
+```bash
+pip install -r requirements.txt
+```
 
 ---
 
